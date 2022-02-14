@@ -8,7 +8,7 @@ namespace Prova1AP.ConsoleApplication
         {
             
             int x = 0, y = 0, z = 0, lineXY, lineXZ, lineZY, sumLineXYZY, sumLineXZZY, sumLineXYXZ;
-            bool triangle = false, isNumeric = false;
+            bool triangle = false, isNumericX = false, isNumericY = false, isNumericZ = false;
             string option;
 
             Console.WriteLine("OLÁ, SEJA BEM VINDO AO SISTEMA DE VERIFICAÇÃO DE TRIÂNGULOS!!\n");
@@ -30,15 +30,15 @@ namespace Prova1AP.ConsoleApplication
                 {
                     Console.WriteLine("\n====================================================================");
                     Console.Write("** 1 - Informe o valor de X: ");
-                    isNumeric = int.TryParse(Console.ReadLine(), out int vX);
+                    isNumericX = int.TryParse(Console.ReadLine(), out int vX);
                     
                     Console.Write("** 2 - Informe o valor de Y: ");
-                    isNumeric = int.TryParse(Console.ReadLine(), out int vY);
+                    isNumericY = int.TryParse(Console.ReadLine(), out int vY);
                     
                     Console.Write("** 3 - Informe o valor de Z: ");
-                    isNumeric = int.TryParse(Console.ReadLine(), out int vZ);
+                    isNumericZ = int.TryParse(Console.ReadLine(), out int vZ);
 
-                    if (isNumeric)
+                    if (isNumericX && isNumericY && isNumericZ)
                     {
                         x = vX;
                         y = vY;
